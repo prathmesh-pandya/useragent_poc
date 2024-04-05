@@ -9,7 +9,10 @@ export default function Home() {
 
   const headerList = headers();
   const dat = headerList.get('user-agent')
+  console.log(dat, 'this is data for server ');
+  
   let isMobileView = isMobileUserAgent(headerList.get('user-agent'));
+  console.log(isMobileView, 'isMobileView this is mibile view for server  ');
   return <Child isMobileView={isMobileView} data={dat} />;
   return (
     <main className='flex min-h-screen flex-col items-center justify-between p-24'>
