@@ -10,7 +10,8 @@ export default function Home() {
   const headerList = headers();
   const dat = headerList.get('user-agent')
   console.log(dat, 'this is data for server ');
-  
+  let isMobileViewD = isMobileUserAgent(headerList.get('User-Agent'));
+  console.log(isMobileViewD, 'isMobileViewD------------');
   let isMobileView = isMobileUserAgent(headerList.get('user-agent'));
   console.log(isMobileView, 'isMobileView this is mibile view for server  ');
   return <Child isMobileView={isMobileView} />;
